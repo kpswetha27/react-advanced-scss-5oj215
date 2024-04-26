@@ -1,0 +1,120 @@
+$profile-bg: #fefaf4;
+$pg-bg: #f6eaff;
+$text-gray: #606278;
+$btn-magenta: #bc43b1;
+$btn-orange: #ffbd95;
+.container {
+  background-color: $pg-bg;
+  height: 100vh;
+
+  .profile-container {
+    width: 50%;
+    padding: 12px;
+    border-radius: 20px;
+    background: white;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    /* top: 50%;
+  transform: translate(-50%, -50%); */
+    transform: translate(-50%, 1%);
+  }
+  @media only screen and (max-width: 992px) {
+    .profile-container {
+      width: 80%;
+    }
+  }
+  .profile-inner-container {
+    background-color: $profile-bg;
+    border-radius: 20px;
+    display: flex;
+    margin: 10px 0;
+    .profile-left {
+      padding: 24px;
+      padding-left: 32px;
+      .thumbnail {
+        border-radius: 50%;
+        width: 145px;
+        height: 145px;
+        background: #737373;
+      }
+      .profile-link {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        padding-top: 10px;
+      }
+    }
+    .profile-right {
+      padding: 32px 24px 24px 0;
+      .name {
+        font-size: 24px;
+        font-family: Noteworthy, Bold;
+      }
+      .title {
+        font-size: 14px;
+        color: $text-gray;
+        font-family: Nadeem, Regular;
+      }
+      .description {
+        font-size: 13px;
+        padding: 10px 0;
+        font-family: "Poppins", Regular;
+      }
+    }
+  }
+  .follower-details {
+    display: flex;
+    font-size: 11px;
+    padding: 10px 0;
+    font-family: Poppins, Medium;
+    &--panel {
+      padding: 0 16px;
+    }
+    &--panel:not(:last-child) {
+      border-right: 1px solid #000;
+    }
+    &--panel:first-child {
+      padding-left: 0;
+    }
+    .count {
+      text-align: center;
+    }
+  }
+  .action-container {
+    padding-top: 16px;
+    display: flex;
+    button {
+      background: transparent;
+      outline: none;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      margin-right: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 11px;
+      font-family: Poppins, Medium;
+      width: 100px;
+      height: 38px;
+    }
+    .btn-follow {
+      background-color: $btn-magenta;
+    }
+    .btn-message {
+      background-color: $btn-orange;
+      color: #000;
+      display: flex;
+      align-items: center;
+      .message-lock-img-span {
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+    .btn-follow:hover,
+    .btn-message:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
